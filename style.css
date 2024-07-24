@@ -6,3 +6,15 @@ table {
     border-collapse: separate;
     border-spacing: 12px;
 }
+
+.operation, .check-result, .errors {
+    margin-top: 12px;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}

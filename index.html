@@ -11,32 +11,49 @@
 <body>
     <h3>Javascript Rekenmachine</h3>
     <main>
-        <table>
-            <tr>
-                <td>
-                    <label for="first-operant">Voer een getal in</label>
-                </tc>
-                <td>
-                    <input id="first-operant" type="number">
-                </tc>
-            </tr>
-            <tr>
-                <td>
-                    <label for="second-operant">Voer een tweede getal in</label>
-                </td>
-                <td>
-                    <input id="second-operant" type="number">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="expected-result">Zelf berekende uitkomst</label>
-                </td>
-                <td>
-                    <input id="expected-result" type="number">
-                </td>
-            </tr>
-        </table>
+        <form id="calc-form" action="">
+            <table>
+                <tr>
+                    <td>
+                        <label for="first-operand">Voer een getal in</label>
+                    </tc>
+                    <td>
+                        <input id="first-operand" type="number" required>
+                    </tc>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="second-operand">Voer een tweede getal in</label>
+                    </td>
+                    <td>
+                        <input id="second-operand" type="number" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="expected-result">Zelf berekende uitkomst</label>
+                    </td>
+                    <td>
+                        <input id="expected-result" type="number" required>
+                    </td>
+                </tr>
+            </table>
+
+            <select name="operator" id="operator">
+                <option value="+">Bereken som</option>
+                <option value="-">Bereken verschil</option>
+                <option value="*">Bereken product</option>
+                <option value="/">Bereken quotient</option>
+            </select>
+    
+            <button id="calc-btn">Bereken</button>
+        </form>
+
+        <div class="errors"></div>
+
+        <div class="operation"></div>
+
+        <div class="check-result"></div>
     </main>
     
     <script src="./script.js"></script>
